@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>TIN - s16534</title>
+        <link rel="stylesheet" href="css/3b.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <div class="box__header">
+                    <h1>Temperature Converter</h1>
+                    <p>Celsius to Fahrenheit and reverse.</p>
+                </div>
+                <div class="box__body">
+                    <div class="box__body__inputs">
+                        <label class="box__input__label" for="temperatureToChange">Temperature:</label>
+                        <input class="box__input" id="temperatureToChange" type="number" oninput='convert()'/>
+                        <p id="alert-temperature" class=" alert-danger">Temperature is required! </p>
+                    </div>
+                    <div class="box__body__checkbox checkboxContent">
+                        <label for="celsiusCheckbox">
+                        <input type="checkbox" id="celsiusCheckbox" onclick="changeConverterToCF()" checked>
+                        Convert Celsius to Fahrenheit</label> 
+                        <label for="fahrenheitCheckbox">
+                        <input type="checkbox" id="fahrenheitCheckbox" onclick="changeConverterToFC()">
+                        Convert Fahrenheit to Celsius</label> 
+                    </div>
+                    <div class="convertResult">
+                        <p id="inputTemperature">
+                            
+                        </p>
+                        <p id="outputTemperature">
+
+                        </p>
+                    </div>
+                    <p id="result">
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="changeTask">
+                <div class="previousTask">
+                    <a href="3a.html">
+                        <span>←</span>
+                        Previous task 
+                    </a>
+                </div>
+                <div class="nextTask">
+                    <a href="3c.html">
+                        Next task 
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="js/3b.js"></script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+
+<html>
+    <head>
+        <title>TIN - s16534</title>
+        <link rel="stylesheet" href="css/3c.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <div class="box__header">
+                    <h1>Temperature Converter</h1>
+                    <p>Celsius to Fahrenheit and reverse.</p>
+                </div>
+                <div class="box__body">
+                    <div class="box__body__inputs">
+                        <label class="box__input__label" for="date">Date:</label>
+                        <input class="box__input" id="date" type="text" placeholder="Use format yyyy-mm-dd (e.g. 2020-12-31)"/>
+                        <p id="alert-date" class="alert-danger">Date format is invalid. </p>
+
+                        <label class="box__input__label" for="temperatureToChange">Temperature:</label>
+                        <input class="box__input" id="temperatureToChange" type="number" />
+                        <p id="alert-temperature" class=" alert-danger">Temperature is invalid! </p>
+                    </div>
+                    <!-- oninput='convert()'/> -->
+                    <div class="box__body__checkbox checkboxContent">
+                        <label for="celsiusCheckbox">
+                        <input type="checkbox" id="celsiusCheckbox" onclick="changeConverterToCF()" checked>
+                        Celsius to Fahrenheit</label> 
+                        <label for="fahrenheitCheckbox">
+                        <input type="checkbox" id="fahrenheitCheckbox" onclick="changeConverterToFC()">
+                        Fahrenheit to Celsius</label> 
+                    </div>
+                    <button type="button" class="btn" onclick='convert()'>Convert</button> 
+                    <div class="convertResult">
+                        <p id="inputTemperature">
+                            
+                        </p>
+                        <p id="outputTemperature">
+
+                        </p>
+                    </div>
+                    <p id="result">
+
+                    </p>
+                </div>
+                <div class="box__table" id="box__table_id">
+                    <table id="weatherTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Input temperature</th>
+                                <th>Output temperature</th>
+                            </tr>
+                        </thead>
+                        <tbody id="weatherTable__body">
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="changeTask">
+                <div class="previousTask">
+                    <a href="3b.html">
+                        <span>←</span>
+                        Previous task 
+                    </a>
+                </div>
+                <div class="nextTask">
+                    <a href="3d.html">
+                        Next task 
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <script type="text/javascript" src="js/3c.js"></script>
+    </body>
+</html>
