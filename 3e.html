@@ -1,0 +1,125 @@
+
+<html>
+    <head>
+        <title>TIN - s16534</title>
+        <link rel="stylesheet" href="css/3e.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <div class="box__header">
+                    <h1>Prognoza Maker</h1>
+                    <p>Create Prognoza for cities.</p>
+                </div>
+                <div class="box__body">
+                    <div class="row m1t" id="prognoza_information">
+                        <div class="box__body__fieldInformation information">
+                            <p class="information__title">
+                                City
+                            </p>
+                            <p class="information__value" id="choosenCity">
+                                Łuków
+                            </p>
+                        </div>
+                        <div class="box__body__fieldInformation information">
+                            <p class="information__title">
+                                Day of the week
+                            </p>
+                            <p class="information__value" id="choosenDay">
+                                Monday
+                            </p>
+                        </div>
+                        <div class="box__body__fieldInformation information">
+                            <p class="information__title">
+                                Average temperature
+                            </p>
+                            <p class="information__value" id="averageTemperature">
+                                32.24 degrees Celsius
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box__body__inputs" id="create">
+                        <label class="box__input__label" for="city">City:</label>
+                        <input class="box__input" id="city" type="text">
+
+                        <label class="box__input__label" for="dateOfWeek">Date of week:</label>
+                        <select class="box__input" id="dateOfWeek" name="dateOfWeek">
+                          <option value="Monday">Monday</option>
+                          <option value="Tuesday">Tuesday</option>
+                          <option value="Wednesday">Wednesday</option>
+                          <option value="Thursday">Thursday</option>
+                          <option value="Friday">Friday</option>
+                          <option value="Saturday">Saturday</option>
+                          <option value="Sunday">Sunday</option>
+                        </select> 
+                        <button type="button" class="btn" onclick='createPrognoza()'>Create</button> 
+                    </div>
+
+                    <div class="box__body__inputs" id="addTemperature">
+                        <label class="box__input__label" for="temperature">Temperature (every three hours):</label>
+                        <input class="box__input" id="temperature" type="number" placeholder="degrees Celsius">
+                        <button id="btn-add" type="button" class="btn" onclick='addTemperature()'>Add temperature</button> 
+                    </div>
+                    
+                </div>
+                <div class="box__table" id="box__table_id">
+                    <table id="weatherTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temperature</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="weatherTable__body">
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="changeTask">
+                <div class="previousTask">
+                    <a href="3c.html">
+                        <span>←</span>
+                        Previous task 
+                    </a>
+                </div>
+                <div class="nextTask">
+                    <!-- <a href="3e.html">
+                        Next task 
+                        <span>→</span>
+                    </a> -->
+                </div>
+            </div>
+            <!-- The Modal -->
+            
+            <!-- <div class="box">
+                <div class="box__body">
+                    <div class="box__body__inputs" id="create">
+                    <label class="box__input__label" for="temperature">New temperature:</label>
+                    <input class="box__input" id="temperature" type="number" placeholder="degrees Celsius">
+                    <button type="button" class="btn" onclick='editTemperature()'>Edit temperature</button> 
+                </div>
+                </div>
+            </div> -->
+            <div id="modalBox" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="box">
+                        <div class="box__body">
+                            <div class="box__body__inputs" id="editInModal">
+                                <!-- <label class="box__input__label" for="temperature">New temperature:</label>
+                                <input class="box__input" id="newTemperature" type="number" placeholder="degrees Celsius">
+                                <button type="button" class="btn" onclick='editTemperature()'>Edit temperature</button>  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+        
+        <script type="text/javascript" src="js/3e.js"></script>
+    </body>
+</html>
